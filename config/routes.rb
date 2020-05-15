@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      resources :boards,
-      resources :cards,
+      resources :boards
+      resources :cards
       resources :users
     end
   end
