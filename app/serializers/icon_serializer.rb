@@ -1,3 +1,3 @@
 class IconSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :images
 end
