@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_17_211206) do
+ActiveRecord::Schema.define(version: 2020_05_17_235257) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,16 +20,33 @@ ActiveRecord::Schema.define(version: 2020_05_17_211206) do
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id", null: false
-    t.index ["user_id"], name: "index_boards_on_user_id"
+    t.bigint "project_id", null: false
+    t.index ["project_id"], name: "index_boards_on_project_id"
   end
 
   create_table "cards", force: :cascade do |t|
+    t.string "content"
     t.bigint "board_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.text "content"
     t.index ["board_id"], name: "index_cards_on_board_id"
+  end
+
+  create_table "icons", force: :cascade do |t|
+    t.text "images", default: [], array: true
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "topic"
+    t.string "background_image"
+    t.text "others", default: [], array: true
+    t.text "icon_img", default: [], array: true
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -42,6 +59,7 @@ ActiveRecord::Schema.define(version: 2020_05_17_211206) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "boards", "users"
+  add_foreign_key "boards", "projects"
   add_foreign_key "cards", "boards"
+  add_foreign_key "projects", "users"
 end
