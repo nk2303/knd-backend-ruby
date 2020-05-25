@@ -5,9 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Card.destroy_all
+Board.destroy_all
+Project.destroy_all
+User.destroy_all
+
+
 david = User.create(username: "david", full_name: "David Pepsi", favorite_color: "blue", email: "davidpepsi@go.edu", password: "123")
 
 project = Project.create(background_image: "", topic: "Fun Project", user_id: david.id)
+project1 = Project.create(background_image: "", topic: "Boring Project", user_id: david.id)
+project2 = Project.create(background_image: "", topic: "Interesting Project", user_id: david.id)
+project3 = Project.create(background_image: "", topic: "Job Project", user_id: david.id)
+
 board = Board.create(title: "favorite", image: "http://www.personal.psu.edu/amz5182/Hobbies/Graphics/hobbies.png", project_id: project.id)
 card = Card.create(content: "Playing with little dogs are my favorite, dont forget to take out ms. kims dogs every sunday evening.", board_id: board.id)
 card1 = Card.create(content: "Go crawfishing when you have time on the weekends.", board_id: board.id)
