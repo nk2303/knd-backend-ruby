@@ -22,9 +22,9 @@ project3 = Project.create(background_image: "", topic: "Job Project", user_id: d
 board = Board.create(title: "favorite", image: "http://www.personal.psu.edu/amz5182/Hobbies/Graphics/hobbies.png", project_id: project.id)
 board1 = Board.create(title: "I like icons", image: "", project_id: project.id)
 board2 = Board.create(title: "Work on Project", image: "", project_id: project.id)
-card = Card.create(content: "Playing with little dogs are my favorite, dont forget to take out ms. kims dogs every sunday evening.", board_id: board.id)
-card1 = Card.create(content: "Go crawfishing when you have time on the weekends.", board_id: board.id)
-card3 = Card.create(content: "Let's do some projects.", board_id: board2.id)
+card = Card.create(card_title: "dogs", content: "Playing with little dogs are my favorite, dont forget to take out ms. kims dogs every sunday evening.", board_id: board.id)
+card1 = Card.create(card_title: "crawfish", content: "Go crawfishing when you have time on the weekends.", board_id: board.id)
+card3 = Card.create(card_title: "projects", content: "Let's do some projects.", board_id: board2.id)
 
 img1 = Icon.create(images: ["../IMAGES/1.png", "../IMAGES/2.png", "../IMAGES/3.gif", 
 "../IMAGES/4.png", "../IMAGES/5.png","../IMAGES/6.png","../IMAGES/7.png","../IMAGES/8.png",

@@ -28,7 +28,7 @@ class Api::V1::BoardsController < ApplicationController
     private
 
     def board_params
-        params.require(:board).permit(:title, :image, :project_id, cards_attributes: [:id, :content])
+        params.require(:board).permit(:title, :image, :project_id, cards_attributes: [:id, :card_title, :content])
         
     end
 end
