@@ -1,3 +1,3 @@
 class CardSerializer < ActiveModel::Serializer
-  attributes :id, :content
+  attributes :id, :content,  :card_title
 end
