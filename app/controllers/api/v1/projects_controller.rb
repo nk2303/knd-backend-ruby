@@ -4,6 +4,11 @@ class Api::V1::ProjectsController < ApplicationController
         render json: @projects, status: :ok
     end
 
+    def show
+        project = Project.find(params[:id])
+        render json: project
+    end
+
     def create
         project = Project.create(project_params)
         render json: {project: ProjectSerializer.new(project)}
@@ -28,6 +33,6 @@ class Api::V1::ProjectsController < ApplicationController
     private
 
     def project_params
-        params.require(:project).permit(:topic, :background_image, :others, :icon_img, :user_id)
+        params.require(:project).permit(:topic, :background_image, :others, :icon_img, :user_id, boards_attributes: [:id, :title, :image, cards_attributes: %i[id content]])
     end
 end
