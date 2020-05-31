@@ -10,7 +10,7 @@ Card.destroy_all
 Board.destroy_all
 Project.destroy_all
 User.destroy_all
-
+Icon.destroy_all
 
 david = User.create(username: "david", full_name: "David Pepsi", favorite_color: "blue", email: "davidpepsi@go.edu", password: "123")
 
@@ -26,11 +26,11 @@ card = Card.create(card_title: "dogs", content: "Playing with little dogs are my
 card1 = Card.create(card_title: "crawfish", content: "Go crawfishing when you have time on the weekends.", board_id: board.id)
 card3 = Card.create(card_title: "projects", content: "Let's do some projects.", board_id: board2.id)
 
-img1 = Icon.create(images: ["../IMAGES/1.png", "../IMAGES/2.png", "../IMAGES/3.gif", 
-"../IMAGES/4.png", "../IMAGES/5.png","../IMAGES/6.png","../IMAGES/7.png","../IMAGES/8.png",
-"../IMAGES/9.png", "../IMAGES/10.png", "../IMAGES/11.gif", "../IMAGES/12.png", "../IMAGES/13.png",
-"../IMAGES/14.png", "../IMAGES/15.png", "../IMAGES/16.png", "../IMAGES/17.png", "../IMAGES/18.png",
-"../IMAGES/19.jpg", "../IMAGES/20.png", "../IMAGES/21.webp", "../IMAGES/22.png", "../IMAGES/23.gif",
-"../IMAGES/24.gif", "../IMAGES/25.png", "../IMAGES/26.png", "../IMAGES/27.png", "../IMAGES/28.png",
-"../IMAGES/29.png", "../IMAGES/30.png", "../IMAGES/31.png", "../IMAGES/32.png"
+img1 = Icon.create(images: ["1.png", "2.png", "3.gif", 
+"4.png", "5.png","6.png","7.png","8.png",
+"9.png", "10.png", "11.gif", "12.png", "13.png",
+"14.png", "15.png", "16.png", "17.png", "18.png",
+"19.jpg", "20.png", "21.webp", "22.png", "23.gif",
+"24.gif", "25.png", "27.png", "28.png",
+"29.png", "30.png", "31.png", "32.png"
 ])
