@@ -1,6 +1,6 @@
 class Api::V1::ProjectsController < ApplicationController
     def index
-        @projects = Project.all
+        @projects = current_user.projects
         render json: @projects, status: :ok
     end
 

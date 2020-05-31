@@ -31,7 +31,7 @@ card3 = Card.create(card_title: "projects", content: "Let's do some projects.", 
 
 card4 = Card.create(card_title: "cats", content: "Make some weed because mr. david would like to have some tea.", board_id: board3.id)
 card5 = Card.create(card_title: "crawfish", content: "Go hike when you have time on the weekends.", board_id: board3.id)
-card6 = Card.create(card_title: "projects", content: "Let's do some projects.", board_id: board3.id)
+card6 = Card.create(card_title: "Cook", content: "Let's do cooking whenever.", board_id: board3.id)
 
 
 img1 = Icon.create(images: ["1.png", "2.png", "3.gif", 
