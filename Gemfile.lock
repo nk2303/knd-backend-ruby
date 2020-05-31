@@ -99,7 +99,15 @@ GEM
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     pg (1.2.3)
+<<<<<<< HEAD
     puma (4.3.5)
+=======
+    pg (1.2.3-x64-mingw32)
+    pg (1.2.3-x86-mingw32)
+    puma (4.3.5)
+      nio4r (~> 2.0)
+    puma (4.3.5-java)
+>>>>>>> 3f87ac5d30084ba8555439da65152ae85890f489
       nio4r (~> 2.0)
     rack (2.2.2)
     rack-cors (1.1.1)
@@ -168,7 +176,7 @@ DEPENDENCIES
   jwt
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
-  puma (~> 4.1)
+  puma (~> 4.3)
   rack-cors
   rails (~> 6.0.2, >= 6.0.2.2)
   spring
@@ -176,7 +184,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 2.6.3p62
+   ruby 2.6.1p33
 
 BUNDLED WITH
    1.17.2

@@ -10,7 +10,8 @@ class Api::V1::ProjectsController < ApplicationController
     end
 
     def create
-        project = Project.create(project_params)
+        new_project_params = { topic: project_params[:topic], background_image: project_params[:background_image], user_id: user_id}
+        project = Project.create(new_project_params)
         render json: {project: ProjectSerializer.new(project)}
     end
 
@@ -25,7 +26,7 @@ class Api::V1::ProjectsController < ApplicationController
     end
 
     def destroy
-        project = Project.find(params[:id])
+        project = Project.find(params[:id])  
         project.destroy
         render json: {message: "project successfully deleted"}
     end
