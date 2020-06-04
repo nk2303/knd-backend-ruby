@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :favorite_color
       t.string :email
       t.string :password_digest
-
+      t.text :icon_img, array: true, default: []
       t.timestamps
     end
   end

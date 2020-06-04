@@ -43,7 +43,6 @@ ActiveRecord::Schema.define(version: 2020_05_26_034022) do
     t.string "topic"
     t.string "background_image"
     t.text "others", default: [], array: true
-    t.text "icon_img", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
@@ -56,6 +55,7 @@ ActiveRecord::Schema.define(version: 2020_05_26_034022) do
     t.string "favorite_color"
     t.string "email"
     t.string "password_digest"
+    t.text "icon_img", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

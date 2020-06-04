@@ -4,7 +4,6 @@ class CreateProjects < ActiveRecord::Migration[6.0]
       t.string :topic
       t.string :background_image
       t.text :others, array: true, default: []
-      t.text :icon_img, array: true, default: []
 
       t.timestamps
     end
