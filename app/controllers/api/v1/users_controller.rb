@@ -12,6 +12,11 @@ class Api::V1::UsersController < ApplicationController
     def update
         user = User.find(params[:id])
         user.update(user_params)
+        puts 'LOOK HERE'
+        puts user.username
+        puts user.icon_img
+        puts user
+        
         if user.valid? 
             render json: { user: UserSerializer.new(user) }
         else
@@ -28,7 +33,7 @@ class Api::V1::UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:username, :full_name, :favorite_color, :email, :password, :icon_img)
+        params.require(:user).permit(:username, :full_name, :favorite_color, :email, :password, icon_img: [])
     end
 
 

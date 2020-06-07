@@ -4,6 +4,11 @@ class Api::V1::BoardsController < ApplicationController
         render json: @boards, status: :ok
     end
 
+    def show
+        board = Board.find(params[:id])
+        render json: board
+    end
+
     def create
         board = Board.create(board_params)
         render json: {board: BoardSerializer.new(board)}
