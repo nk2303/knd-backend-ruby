@@ -32,7 +32,7 @@ card3 = Card.create(card_title: "projects", content: "Let's do some projects.", 
 card4 = Card.create(card_title: "cats", content: "Make some weed because mr. david would like to have some tea.", board_id: board3.id)
 card5 = Card.create(card_title: "crawfish", content: "Go hike when you have time on the weekends.", board_id: board3.id)
 card6 = Card.create(card_title: "Cook", content: "Let's do cooking whenever.", board_id: board3.id)
-
+user_project = UserProject.create(project_id: project1.id, user_id: kim.id)
 
 img1 = Icon.create(images: ["1.png", "2.png", "3.gif", 
 "4.png", "5.png","6.png","7.png","8.png",
