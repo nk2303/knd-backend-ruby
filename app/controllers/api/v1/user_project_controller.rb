@@ -1,4 +1,4 @@
-class Api::V1::UserProjectController < ApplicationController
+class Api::V1::UserProjectsController < ApplicationController
 
 
     def index
