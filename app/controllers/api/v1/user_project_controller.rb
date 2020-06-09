@@ -7,7 +7,7 @@ class Api::V1::UserProjectController < ApplicationController
     end
 
     def create
-        user_project = User.create(user_project_params)
+        user_project = UserProject.create(user_project_params)
         render json: {user_project: UserProjectSerializer.new(user_project)}
     end
 
