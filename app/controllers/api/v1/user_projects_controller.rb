@@ -20,7 +20,7 @@ class Api::V1::UserProjectsController < ApplicationController
     private
 
     def user_project_params
-        params.require(:user_project).permit(:project_id, :user_id)
+        params.require(:user_project).permit(:project_id, :user_id, :admin_permission)
     end
 
 
