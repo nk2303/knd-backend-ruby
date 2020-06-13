@@ -4,6 +4,21 @@ class Api::V1::UsersController < ApplicationController
         render json: @users, status: :ok
     end
 
+    def show
+        user = User.all.find{|u| u.username == params[:id]}
+        puts user
+        # puts params[:username]
+        puts "fatty"
+        render json: user
+    end
+
+    # def findusername
+    #     user = User.all.find{|u| u.username == params[:id]}
+    #     puts user
+    #     puts "kim ewww"
+    #     render json: user
+    # end
+
     def create
         user = User.create(user_params)
         render json: {user: UserSerializer.new(user)}
