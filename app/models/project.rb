@@ -1,5 +1,5 @@
 class Project < ApplicationRecord
-    has_many :boards
+    has_many :boards, dependent: :delete_all
     has_many :user_projects
     # has_many :users, through: :user_project
     belongs_to :user
