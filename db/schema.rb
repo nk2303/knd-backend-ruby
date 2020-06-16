@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2020_06_08_041707) do
 
   create_table "cards", force: :cascade do |t|
     t.string "content"
-    t.bigint "board_id"
+    t.bigint "board_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "card_title"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2020_06_08_041707) do
   end
 
   create_table "user_projects", force: :cascade do |t|
+    t.boolean "admin_permission"
     t.bigint "user_id"
     t.bigint "project_id"
     t.datetime "created_at", precision: 6, null: false
