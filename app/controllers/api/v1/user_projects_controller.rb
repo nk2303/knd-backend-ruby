@@ -3,9 +3,11 @@ class Api::V1::UserProjectsController < ApplicationController
 
     def index
         @user_projects = UserProject.where(user_id: current_user.id )
+        @project = @user_projects.map { |obj| obj }
         @project_ids = @user_projects.map { |obj| obj.project_id }
         # @projector =  @project_ids.map { |i| Project.find(id: i) }
         @projector = Project.where(id: @project_ids)
+        @projector = @projector + @project
 
 
         render json: @projector, status: :ok
