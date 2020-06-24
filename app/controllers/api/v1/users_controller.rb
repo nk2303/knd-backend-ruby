@@ -4,9 +4,13 @@ class Api::V1::UsersController < ApplicationController
         render json: @users, status: :ok
     end
 
-    def show
-        user = User.all.find{|u| u.username == params[:id]}
-        render json: user
+    def searchByUsername
+        user = User.all.find{|u| u.username == params[:username]}
+        if user
+            render json: user
+        else
+            render json: { error: 'failed to find user' }, status: :not_acceptable
+        end
     end
 
 
