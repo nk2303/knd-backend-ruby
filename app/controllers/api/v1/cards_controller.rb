@@ -28,7 +28,7 @@ class Api::V1::CardsController < ApplicationController
     private
 
     def card_params
-        params.require(:card).permit(:card_title, :content, :board_id)
+        params.require(:card).permit(:card_title, :content, :board_id, :image)
     end
     
 end

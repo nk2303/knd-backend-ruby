@@ -23,18 +23,18 @@ project1 = Project.create(background_image: "", topic: "Boring Project", user_id
 project2 = Project.create(background_image: "", topic: "Interesting Project", user_id: david.id)
 project3 = Project.create(background_image: "", topic: "Job Project", user_id: kim.id)
 
-board = Board.create(title: "favorite", image: "http://www.personal.psu.edu/amz5182/Hobbies/Graphics/hobbies.png", project_id: project.id)
-board1 = Board.create(title: "I like icons", image: "", project_id: project.id)
-board2 = Board.create(title: "Work on Project", image: "", project_id: project3.id)
-board3 = Board.create(title: "Going to do", image: "", project_id: project3.id)
+board = Board.create(title: "favorite", project_id: project.id)
+board1 = Board.create(title: "I like icons", project_id: project.id)
+board2 = Board.create(title: "Work on Project", project_id: project3.id)
+board3 = Board.create(title: "Going to do", project_id: project3.id)
 
-# card = Card.create(card_title: "dogs", content: "Playing with little dogs are my favorite, dont forget to take out ms. kims dogs every sunday evening.", board_id: board.id)
-# card1 = Card.create(card_title: "crawfish", content: "Go crawfishing when you have time on the weekends.", board_id: board.id)
-# card3 = Card.create(card_title: "projects", content: "Let's do some projects.", board_id: board2.id)
+card = Card.create(card_title: "dogs", image: '', content: "Playing with little dogs are my favorite, dont forget to take out ms. kims dogs every sunday evening.", board_id: board.id)
+card1 = Card.create(card_title: "crawfish", image: '', content: "Go crawfishing when you have time on the weekends.", board_id: board.id)
+card3 = Card.create(card_title: "projects", image: '', content: "Let's do some projects.", board_id: board2.id)
 
-# card4 = Card.create(card_title: "cats", content: "Make some weed because mr. david would like to have some tea.", board_id: board3.id)
-# card5 = Card.create(card_title: "crawfish", content: "Go hike when you have time on the weekends.", board_id: board3.id)
-# card6 = Card.create(card_title: "Cook", content: "Let's do cooking whenever.", board_id: board3.id)
+card4 = Card.create(card_title: "cats", image: '', content: "Make some weed because mr. david would like to have some tea.", board_id: board3.id)
+card5 = Card.create(card_title: "crawfish", image: '', content: "Go hike when you have time on the weekends.", board_id: board3.id)
+card6 = Card.create(card_title: "Cook", image: '', content: "Let's do cooking whenever.", board_id: board3.id)
 user_project = UserProject.create(project_id: project1.id, user_id: kim.id)
 
 img1 = Icon.create(images: ["1.png", "2.png", "3.gif", 
