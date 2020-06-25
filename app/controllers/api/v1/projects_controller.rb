@@ -34,6 +34,6 @@ class Api::V1::ProjectsController < ApplicationController
     private
 
     def project_params
-        params.require(:project).permit(:topic, :background_image, :others, :icon_img, :user_id, boards_attributes: [:id, :title, :image, cards_attributes: %i[id content]])
+        params.require(:project).permit(:topic, :background_image, :others, :icon_img, :user_id, boards_attributes: [:id, :title, cards_attributes: %i[id content]])
     end
 end
