@@ -13,8 +13,6 @@ Project.destroy_all
 User.destroy_all
 Icon.destroy_all
 
-
-
 david = User.create(username: "david", full_name: "David Pepsi", favorite_color: "blue", email: "davidpepsi@go.edu", password: "123")
 kim = User.create(username: "kim", full_name: "Kim Possible", favorite_color: "light blue", email: "kim@uw.edu", password: "123")
 
