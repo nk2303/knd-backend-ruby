@@ -4,5 +4,6 @@ class Project < ApplicationRecord
     # has_many :users, through: :user_project
     belongs_to :user
     accepts_nested_attributes_for :boards, allow_destroy: true
+    accepts_nested_attributes_for :user_projects, allow_destroy: true
     
 end
